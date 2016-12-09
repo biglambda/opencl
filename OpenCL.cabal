@@ -54,7 +54,7 @@ Library
     extra-libraries: OpenCL
 
   if os(darwin)
-    cpp-options: -DCALLCONV=ccall
+    cpp-options: -D __has_feature\(enumerator_attributes\)=0 -DCALLCONV=ccall
     cc-options: "-U__BLOCKS__"
     Frameworks:  OpenCL
 
